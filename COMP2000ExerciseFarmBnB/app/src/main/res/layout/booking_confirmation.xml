@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+    android:background="@color/background_green">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_rowWeight="0.01"
+            android:text="Farm BnB"
+            android:gravity="top|center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+    <Button
+        android:id="@+id/manage_bookings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/background_green"
+        android:textAllCaps="false"
+        android:text="Manage Bookings"
+        android:onClick="LoadManageBookings"
+        android:textAlignment="textStart"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="0.01"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:text="Confirm your booking"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="10pt"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:background="@color/background_green">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="8pt"
+        android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/accommodation_name_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accommodation: "
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="8pt"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:background="@color/background_green">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arrival Date: "
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="8pt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/arrival_date_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="8pt"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:background="@color/background_green">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Departure Date: "
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="8pt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/departure_date_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="8pt"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="0.01"
+        android:text="Total Price: £xxx.xx"
+        android:textAlignment="textStart"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:textColor="@color/white"
+        android:textSize="8pt"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/fab_margin"/>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:background="@color/background_green">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:backgroundTint="@color/button_colour"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="Edit Booking"
+        android:onClick="LoadAvailabiltyChecker"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:backgroundTint="@color/button_colour"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="Confirm Booking"
+        android:onClick="LoadPaymentDetails"
+        android:layout_gravity="center"/>
+
+        </LinearLayout>>
+
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

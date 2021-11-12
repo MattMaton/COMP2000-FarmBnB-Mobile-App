@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_green"
+    android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/accomodation_barn_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:backgroundTint="@color/background_green"
+            android:text="Farm BnB"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+    <Button
+        android:id="@+id/accomodation_barn_details_back"
+        android:layout_width="match_parent"
+        android:textSize="40px"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/background_dark_green"
+        android:drawableLeft="@android:drawable/ic_media_previous"
+        android:text="Barn Accomodation"
+        android:onClick="LoadHomePage"
+        android:textAlignment="textStart"
+        android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/accomodation_farmhouse_image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:text="Placeholder for image"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/accomodation_farmhouse_details_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_dark_green"
+            android:padding="@dimen/fab_margin"
+            android:text="@string/farmhouse_details"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/accomodation_farmhouse_details_availability"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/background_dark_green"
+            android:drawableRight="@android:drawable/ic_menu_my_calendar"
+            android:text="Check availablity"
+            android:onClick="LoadAvailabiltyChecker"
+            android:tag="Self-Catering Barn"
+            android:textAlignment="textStart"
+            android:textColor="@color/white" />
+
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

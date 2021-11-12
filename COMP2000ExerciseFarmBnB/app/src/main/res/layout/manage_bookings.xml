@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:background="@color/background_green"
+android:orientation="vertical" >
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Farm BnB"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/manage_bookings_back"
+        android:layout_width="match_parent"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/background_dark_green"
+        android:drawableLeft="@android:drawable/ic_media_previous"
+        android:text="Home"
+        android:onClick="LoadHomePage"
+        android:textAlignment="textStart"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/booking_details_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Booking ID"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/booking_details_accomodation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accomodation"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/booking_details_arrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arrival"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/booking_details_departure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Departure"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="426dp"
+        android:layout_height="593dp"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:background="@color/background_dark_green"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
