@@ -86,13 +86,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.manage_bookings);
     }
 
-    public void LoadSignUpScreen(View view) {
+    public void CreateAccount(View view) {
         String userTitle = ((TextView) findViewById(R.id.UserTitle)).getText().toString();
-        String userPassword = ((TextView) findViewById(R.id.UserPassword)).getText().toString();
         String userFirstName = ((TextView) findViewById(R.id.UserFirstName)).getText().toString();
         String userLastName = ((TextView) findViewById(R.id.UserLastName)).getText().toString();
         String userPhoneNumber = ((TextView) findViewById(R.id.UserPhoneNumber)).getText().toString();
         String userHomeAddress = ((TextView) findViewById(R.id.UserHomeAddress)).getText().toString();
+        String userEmailAddress = ((TextView) findViewById(R.id.UserInputEmail)).getText().toString();
+        String userPassword = ((TextView) findViewById(R.id.UserInputPassword)).getText().toString();
 
         if (
                 (userTitle.equals(""))
@@ -101,12 +102,17 @@ public class MainActivity extends AppCompatActivity {
                         && (userLastName.equals(""))
                         && (userPhoneNumber.equals(""))
                         && (userHomeAddress.equals(""))
+                        && (userEmailAddress.equals(""))
         ){
             PopUpErrorMessage("All fields are required for sign up");
         }
         else{
             setContentView(R.layout.homescreen);
-        }
+        };
+    }
+
+    public void LoadSignUpScreen(View view) {
+        setContentView(R.layout.sign_up_screen);
     }
 
     public void LoadBookingConfirmation(View view) {
@@ -119,14 +125,13 @@ public class MainActivity extends AppCompatActivity {
         AccommodationName = ((TextView) findViewById(R.id.accommodation_name_confirm)).getText().toString();
     }
 
-    public void LoadOrderConfirmation(View view) {setContentView(R.layout.order_confirmation);}
-
     public void PopUpErrorMessage(String errormessage) {
         Toast error_message = Toast.makeText(MainActivity.this, errormessage, Toast.LENGTH_LONG);
         error_message.show();
     }
+    public void LoadPaymentDetails(View view) {setContentView(R.layout.payment_screen);}
 
-    public void LoadPaymentDetails(View view) {
+    public void LoadOrderConfirmation(View view) {
 
         String UserCardNumber = ((TextView) findViewById(R.id.UserCardNumber)).getText().toString();
         String UserCardExpiry = ((TextView) findViewById(R.id.UserCardExpiry)).getText().toString();
@@ -140,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
             PopUpErrorMessage("All fields are required for payment");
         }
         else{
-            setContentView(R.layout.payment_screen);
+            setContentView(R.layout.order_confirmation);
         }
     }
 
@@ -157,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
 
         Spinner arrivaldate = (Spinner) findViewById(R.id.arrival_date);
         TextView departuredate = (TextView) findViewById(R.id.departure_date);
-        SimpleDateFormat dateFormatText = new SimpleDateFormat("dd-MMMM-yyyy");
+        SimpleDateFormat dateFormatText = new SimpleDateFormat("dd MMMM yyyy");
 
         arrivaldate.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             Date d;
@@ -199,7 +204,7 @@ public class MainActivity extends AppCompatActivity {
         {
             // do something that throws an exception here
         Spinner dropdown = findViewById(R.id.arrival_date);
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMMM-yyyy");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy");
         ArrayList<String> SaturdayDates = new ArrayList<String>();
 
         Calendar calendar = Calendar.getInstance();
@@ -232,7 +237,6 @@ public class MainActivity extends AppCompatActivity {
         else{
             DaysTillSat = 0;
         }
-
         calendar.add(Calendar.DATE, DaysTillSat);
         SaturdayDates.add(dateFormat.format(calendar.getTime()));
 

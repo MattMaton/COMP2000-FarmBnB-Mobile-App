@@ -90,7 +90,7 @@ android:orientation="vertical"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/button_colour"
         android:text="Create Account"
-        android:onClick="LoadHomePage"
+        android:onClick="CreateAccount"
         android:textAlignment="center"
         android:textColor="@color/white" />
 
