@@ -208,35 +208,33 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<String> SaturdayDates = new ArrayList<String>();
 
         Calendar calendar = Calendar.getInstance();
-        Date TodayDate = calendar.getTime();
-        Integer DaysTillSat;
+        Integer DaysTillSat = 0;
 
 
-        String DayofWeek = new SimpleDateFormat("EEEE", Locale.ENGLISH).format(TodayDate.getTime());
-        if (DayofWeek=="Monday"){
-            DaysTillSat = 5;
-        }
-        else if (DayofWeek=="Tuesday"){
-            DaysTillSat = 4;
-        }
-        else if (DayofWeek=="Wednesday"){
-            DaysTillSat = 3;
-        }
-        else if (DayofWeek=="Thursday"){
-            DaysTillSat = 2;
-        }
-        else if (DayofWeek=="Friday"){
-            DaysTillSat = 1;
-        }
-        else if (DayofWeek=="Saturday"){
-            DaysTillSat = 0;
-        }
-        else if (DayofWeek=="Sunday"){
-            DaysTillSat = 6;
-        }
-        else{
-            DaysTillSat = 0;
-        }
+        int  DayofWeek = calendar.get(Calendar.DAY_OF_WEEK);
+            switch (DayofWeek) {
+                case Calendar.MONDAY:
+                    DaysTillSat = 5;
+                    break;
+                case Calendar.TUESDAY:
+                    DaysTillSat = 4;
+                    break;
+                case Calendar.WEDNESDAY:
+                    DaysTillSat = 3;
+                    break;
+                case Calendar.THURSDAY:
+                    DaysTillSat = 2;
+                    break;
+                case Calendar.FRIDAY:
+                    DaysTillSat = 1;
+                    break;
+                case Calendar.SATURDAY:
+                    DaysTillSat = 0;
+                    break;
+                case Calendar.SUNDAY:
+                    DaysTillSat = 6;
+                    break;
+            }
         calendar.add(Calendar.DATE, DaysTillSat);
         SaturdayDates.add(dateFormat.format(calendar.getTime()));
 
@@ -244,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
         Date nextSaturdayDate;
         Integer DaysMultiply;
 
-        for(int i = 1; i < 10; i++) {
+        for(int i = 1; i < 52; i++) {
             Calendar c = Calendar.getInstance();
             DaysMultiply = (i * 7)+DaysTillSat;
             c.add(Calendar.DATE, DaysMultiply);

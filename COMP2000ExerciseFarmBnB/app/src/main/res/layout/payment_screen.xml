@@ -30,6 +30,7 @@ android:orientation="vertical"
         <EditText
             android:id="@+id/UserCardNumber"
             android:layout_width="367dp"
+            android:theme="@style/TextInput"
             android:layout_height="wrap_content"
             android:ems="10"
             android:textColor="@color/white"
@@ -39,6 +40,7 @@ android:orientation="vertical"
 
         <EditText
             android:id="@+id/UserCardExpiry"
+            android:theme="@style/TextInput"
             android:layout_width="367dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -48,6 +50,7 @@ android:orientation="vertical"
             android:inputType="date" />
     <EditText
         android:id="@+id/UserCardCVC"
+        android:theme="@style/TextInput"
         android:layout_width="367dp"
         android:layout_height="wrap_content"
         android:ems="10"
