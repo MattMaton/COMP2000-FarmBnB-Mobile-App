@@ -70,6 +70,10 @@ public class MainActivity extends AppCompatActivity {
         AccommodationName = "Self-Catering Farm";
     }
 
+    public void LogOut(View view) {
+        setContentView(R.layout.login_screen);
+    }
+
     public void LoadHomePage(View view) {
         String userEmail = ((TextView) findViewById(R.id.UserEmailAddress)).getText().toString();
         String userPassword = ((TextView) findViewById(R.id.UserPassword)).getText().toString();
@@ -77,8 +81,11 @@ public class MainActivity extends AppCompatActivity {
         if ((userEmail.equals("")) && (userPassword.equals("")) ){
             PopUpErrorMessage("User email and password is required");
         }
-        else{
+        else if((userEmail.equals(UserDetails.EmailAddress)) && (userPassword.equals(UserDetails.Password)) ){
             setContentView(R.layout.homescreen);
+        }
+        else{
+            PopUpErrorMessage("User email or password is incorrect");
         }
     }
 
@@ -107,6 +114,8 @@ public class MainActivity extends AppCompatActivity {
             PopUpErrorMessage("All fields are required for sign up");
         }
         else{
+            UserDetails.EmailAddress = userEmailAddress;
+            UserDetails.Password = userPassword;
             setContentView(R.layout.homescreen);
         };
     }
