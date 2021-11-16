@@ -28,63 +28,11 @@ android:orientation="vertical" >
         android:textAlignment="textStart"
         android:textColor="@color/white" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TableLayout
+        android:id="@+id/manage_bookings_table"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="5dp"
-        android:weightSum="2">
-
-        <TextView
-            android:id="@+id/booking_details_ID"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Booking ID"
-            android:layout_marginLeft="@dimen/fab_margin"
-            android:layout_marginRight="@dimen/fab_margin"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
-        <TextView
-            android:id="@+id/booking_details_accomodation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Accomodation"
-            android:layout_marginRight="@dimen/fab_margin"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/booking_details_arrival"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Arrival"
-            android:layout_marginRight="@dimen/fab_margin"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/booking_details_departure"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Departure"
-            android:layout_marginRight="@dimen/fab_margin"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="426dp"
-        android:layout_height="593dp"
-        android:layout_marginRight="@dimen/fab_margin"
-        android:background="@color/background_dark_green"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
+        android:layout_width="match_parent"
+        android:backgroundTint="@color/background_dark_green"/>
 
 </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
